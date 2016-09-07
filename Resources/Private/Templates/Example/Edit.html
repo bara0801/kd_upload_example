@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+	  xmlns:f="http://xsd.helmut-hummel.de/ns/TYPO3/CMS/Fluid/ViewHelpers">
+	<f:layout name="Default" />
+
+	<f:section name="main">
+		<h1>Edit {example.name}</h1>
+		<f:render partial="FormErrors" section="main" arguments="{object:'example'}"/>
+		<f:render partial="FormErrors" section="main" arguments="{object:'imagesToAdd'}"/>
+		<f:form action="update" object="{example}" name="example"  enctype="multipart/form-data">
+			<f:render partial="Example/FormFields" section="name" arguments="{_all}" />
+			<f:render partial="Example/FormFields" section="images" arguments="{_all}" />
+			<f:form.submit value="Submit" />
+		</f:form>
+	</f:section>
+</html>

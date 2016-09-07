@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+	  xmlns:f="http://xsd.helmut-hummel.de/ns/TYPO3/CMS/Fluid/ViewHelpers">
+	<f:layout name="Default" />
+
+	<f:section name="main">
+		<h1>List Examples</h1>
+		<f:link.action action="new">Create new example</f:link.action>
+		<table>
+			<thead>
+				<tr>
+					<td>Name</td>
+					<td>Actions</td>
+				</tr>
+			</thead>
+			<tbody>
+				<f:for each="{examples}" as="example">
+					<tr>
+						<td>{example.name}</td>
+						<td>
+							<f:link.action action="edit" arguments="{example: example}">Edit</f:link.action>
+							<f:link.action action="delete" arguments="{example: example}">Delete</f:link.action>
+						</td>
+					</tr>
+				</f:for>
+			</tbody>
+		</table>
+	</f:section>
+</html>

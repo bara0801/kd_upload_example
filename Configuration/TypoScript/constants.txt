@@ -1,0 +1,15 @@
+
+plugin.tx_kduploadexample {
+	view {
+		# cat=plugin.tx_kduploadexample/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:kd_upload_example/Resources/Private/Templates/
+		# cat=plugin.tx_kduploadexample/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:kd_upload_example/Resources/Private/Partials/
+		# cat=plugin.tx_kduploadexample/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:kd_upload_example/Resources/Private/Layouts/
+	}
+	persistence {
+		# cat=plugin.tx_kduploadexample//a; type=string; label=Default storage PID
+		storagePid =
+	}
+}
